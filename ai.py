@@ -3,24 +3,23 @@ import random
 
 class AI(Players):
     def __init__(self):
-        self.choose_gesture = ''
-        super().__init__()
-        self.set_name()
+        super().__init__("robot")
+       
         
 
     def gesture(self):
-        self.select_gesture = input('/n Please enter: rock, paper, scissors, lizard, spock\n')
-        if self.gesture_select  in  self.ai_gestures:
-            print(random.choice(self))
-        else:
-            while self.gesture_select not in self.ai_gestures:
-                print("/n not a choice.. Please select: rock, papers, scissors, lizard, sock/n")
-                self.choice = input("/nPlease enter: rock, paper, scissors, lizard, spock\n" )
+        self.choice_gesture = random.choice(self.human_gestures)
+        # if self.choice_gesture  in  self.ai_gesture:
+        #     print(self.choice_gesture)
+        # else:
+        #     while self.gesture_select not in self.ai_gestures:
+        #         print("/n not a choice.. Please select: rock, papers, scissors, lizard, sock/n")
+                
 
-        print (f'gesure choosen: {self.gesture_select}')
-
-
+        print (f'gesure choosen: {self.choice_gesture}')
     def set_name(self):
-        robot = self.name
-        print(self.name)
-        self.set_name.append(robot)
+        self.property_name = 'robot'
+        print(self.property_name)
+
+
+      

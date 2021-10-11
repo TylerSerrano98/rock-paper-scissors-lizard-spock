@@ -4,3 +4,4 @@ class Players:
         self.name = name
         self.score = 0
         self.human_gestures = ["rock", "paper", "scissors", "lizard", "spock"]
+        self.choice_gesture = ""
