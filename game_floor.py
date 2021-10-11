@@ -23,6 +23,7 @@ class game:
             '\n paper disproves spock'
             '\n spock vaporizes rock')
 
+
     def game_mode(self):
       while True:
           response = input("/n How many players? (1 or 2)")
