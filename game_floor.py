@@ -4,7 +4,8 @@ from ai import AI
 
 class game:
     def __init__(self):
-        pass
+        self.player1 = Human(input('welcome player 1, Enter your name: '))
+        self.player2 = AI()
 
     def run_game(self):
         pass
@@ -16,4 +17,6 @@ class game:
         pass
 
     def multi_player(self):
-        pass
+        user_input = ("would you like to play multiplayer? yes or no:")
+        if user_input == "yes":
+            self.player2 = Human(input('welcome player 2, Enter your name: '))
