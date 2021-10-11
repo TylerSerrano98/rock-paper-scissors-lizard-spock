@@ -48,7 +48,14 @@ class game:
    
    
     def game_winner(self):
-        pass
+        if self.player_one.score == 3:
+            print("f The winner is {self.player_one.name}!")
+        elif self.player_two.score == 3:
+            print("f The winner is {self.player_two.name}!")
+            
+
+      
+        
 
 
 
