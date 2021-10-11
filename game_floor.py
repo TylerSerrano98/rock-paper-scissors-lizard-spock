@@ -8,10 +8,20 @@ class game:
         self.player2 = AI()
 
     def run_game(self):
-        pass
+        self.display_welcome()
 
     def display_welcome(self):
-        pass
+        print('Welcome to rock, paper, scissors, lizard, spock the game is best of 3. Good luck!')
+        print('Who beats who?:\n rock crushes scissors'
+            '\n scissors cuts paper'
+            '\n paper covers rock'
+            '\n rock crushes lizard'
+            '\n lizard poisons spock'
+            '\n spock smashes scissors'
+            '\n scissors decapitates lizard'
+            '\n lizard eats paper'
+            '\n paper disproves spock'
+            '\n spock vaporizes rock')
 
     def single_player(self):
       while True:
