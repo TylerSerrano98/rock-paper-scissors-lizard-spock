@@ -40,7 +40,33 @@ class game:
         self.player_two_.player_two_gesture()
 
     def game_logic(self):
-        pass
+        while (self.player1.score < 3 and self.player2.score < 3):
+            self.player1.gestures()
+            self.player2.gesture()
+            
+            if self.player1.choice == self.player2.choice:
+             print('tie, go again!')
+
+            elif (self.player1.choice == 'rock' and self.player2.choice == 'scissors') or \
+                (self.player1.choice == 'scissors' and self.player2.choice == 'paper') or \
+                (self.player1.choice == 'paper' and self.player2.choice == 'rock') or \
+                (self.player1.choice == 'rock' and self.player2.choice == 'lizard') or \
+                (self.player1.choice == 'lizard' and self.player2.choice == 'paper') or \
+                (self.player1.choice == 'spock' and self.player2.choice == 'scissors') or \
+                (self.player1.choice == 'lizard' and self.player2.choice == 'paper') or \
+                (self.player1.choice == 'paper' and self.player2.choice == 'spock') or \
+                (self.player1.choice == 'spock' and self.player2.choice == 'rock') or \
+                (self.player1.choice == 'scissors' and self.player2.choice == 'lizard'):
+
+                self.player1.score += 1
+                print(f'{self.player1.choice} beats {self.player2.choice} player 1 wins the round!')
+                print(f'Current score Player 1: {self.player1.score} Player 2: {self.player2.score}')
+                return self.game_logic()
+            else:
+                self.player2.score += 1
+                print(f'{self.player2.choice} beats {self.player1.choice} player 2 wins the round!')
+                print(f'Current score Player 1: {self.player1.score} Player 2: {self.player2.score}')
+        
 
 
    
