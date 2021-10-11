@@ -13,7 +13,7 @@ class game:
     def display_welcome(self):
         pass
 
-    def single_player(self):
+    def game_mode(self):
       while True:
           response = input("/n How many players? (1 or 2)")
           if int(response) == 1:
@@ -22,14 +22,14 @@ class game:
           elif int (response)==2:
               self.multi_player == Human()
 
-    def single_player_gesture(self):
-        self.single_player.show_gesture_options()
-        self.single_player.choose_player_gesture()
+    def player_one_gesture(self):
+        self._player_one.show_gesture_options()
+        self.player_one.choose_player_gesture()
+
+    def player_two_gesture(self):
+        self.player_two_.player_two_gesture()
 
 
 
 
-    def multi_player(self):
-        user_input = ("would you like to play multiplayer? yes or no:")
-        if user_input == "yes":
-            self.player2 = Human(input('welcome player 2, Enter your name: '))
+   

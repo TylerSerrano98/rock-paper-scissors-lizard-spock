@@ -1,14 +1,17 @@
-from player import Player 
-class AI(Player):
+from players import Players
+
+
+class AI(Players):
     def __init__(self):
         self.choose_gesture = ''
         super().__init__()
         self.set_name()
+        
 
     def gesture(self):
         self.select_gesture = input('/n Please enter: rock, paper, scissors, lizard, spock\n')
         if self.gesture_select  in  self.ai_gestures:
-            print(self.choice)
+            print(self.random.choice)
         else:
             while self.gesture_select not in self.ai_gestures:
                 print("/n not a choice.. Please select: rock, papers, scissors, lizard, sock/n")
