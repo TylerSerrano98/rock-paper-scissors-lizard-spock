@@ -1,5 +1,5 @@
 from players import Players
-
+import random
 
 class AI(Players):
     def __init__(self):
@@ -11,7 +11,7 @@ class AI(Players):
     def gesture(self):
         self.select_gesture = input('/n Please enter: rock, paper, scissors, lizard, spock\n')
         if self.gesture_select  in  self.ai_gestures:
-            print(self.random.choice)
+            print(random.choice(self))
         else:
             while self.gesture_select not in self.ai_gestures:
                 print("/n not a choice.. Please select: rock, papers, scissors, lizard, sock/n")
@@ -21,5 +21,6 @@ class AI(Players):
 
 
     def set_name(self):
-        self.name = input("/n Please select player name/n")
+        robot = self.name
         print(self.name)
+        self.set_name.append(robot)

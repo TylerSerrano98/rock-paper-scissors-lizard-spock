@@ -39,6 +39,16 @@ class game:
     def player_two_gesture(self):
         self.player_two_.player_two_gesture()
 
+    def game_logic(self):
+        pass
+
+
+   
+   
+   
+   
+    def game_winner(self):
+        pass
 
 
 
