@@ -1,3 +1,4 @@
+from random import choice
 from players import Players
 from human import Human
 from ai import AI
@@ -12,10 +13,11 @@ class game:
         self.game_mode()
         self.game_logic()
         self.game_winner()
+       
         
 
     def display_welcome(self):
-        print('Welcome to rock, paper, scissors, lizard, spock the game is best of 3. Good luck!')
+        print('Welcome to rock, paper, scissors, lizard, spock the game is best of 5. Good luck!')
         print('Who beats who?:\n rock crushes scissors'
             '\n scissors cuts paper'
             '\n paper covers rock'
@@ -47,32 +49,47 @@ class game:
             if self.player1.choice_gesture == self.player2.choice_gesture:
              print('tie, go again!')
 
-            elif (self.player1.choice_gesture == 'rock' and self.player2.choice_gesture == 'scissors') or \
-                (self.player1.choice_gesture == 'scissors' and self.player2.choice_gesture == 'paper') or \
-                (self.player1.choice_gesture == 'paper' and self.player2.choice_gesture == 'rock') or \
-                (self.player1.choice_gesture == 'rock' and self.player2.choice_gesture == 'lizard') or \
-                (self.player1.choice_gesture == 'lizard' and self.player2.choice_gesture == 'paper') or \
-                (self.player1.choice_gesture == 'spock' and self.player2.choice_gesture == 'scissors') or \
-                (self.player1.choice_gesture == 'lizard' and self.player2.choice_gesture == 'paper') or \
-                (self.player1.choice_gesture == 'paper' and self.player2.choice_gesture == 'spock') or \
-                (self.player1.choice_gesture == 'spock' and self.player2.choice_gesture == 'rock') or \
-                (self.player1.choice_gesture == 'scissors' and self.player2.choice_gesture == 'lizard'):
-
+            elif (self.player1.choice_gesture == 'rock' and (self.player2.choice_gesture == 'scissors' or self.player2.choice_gesture =='lizard')):
+                print(f"player1 wins!")
+                self.player1.score +=1 
+                
+            elif (self.player1.choice_gesture == 'scissors' and (self.player2.choice_gesture == 'paper' or self.player2.choice_gesture == 'lizard')):
+                  self.player1.score += 1
+                  print(f'{self.player1.choice_gesture} beats {self.player2.choice_gesture} player 1 wins the round!')
+                  
+                
+            elif (self.player1.choice_gesture == 'paper' and (self.player2.choice_gesture == 'rock' or self.player2.choice_gesture == 'spock')):
+                 self.player1.score += 1
+                 print(f'{self.player1.choice_gesture} beats {self.player2.choice_gesture} player 1 wins the round!')
+                 
+                
+            elif (self.player1.choice_gesture == 'lizard' and self.player2.choice_gesture == 'paper'):
+                 self.player1.score += 1
+                 print(f'{self.player1.choice_gesture} beats {self.player2.choice_gesture} player 1 wins the round!')
+                
+               
+            elif (self.player1.choice_gesture == 'spock' and (self.player2.choice_gesture == 'scissors' or self.player2.choice_gesture == 'rock')):
                 self.player1.score += 1
                 print(f'{self.player1.choice_gesture} beats {self.player2.choice_gesture} player 1 wins the round!')
-                print(f'Current score Player 1: {self.player1.score} Player 2: {self.player2.score}')
+                
             else:
                 self.player2.score += 1
                 print(f'{self.player2.choice_gesture} beats {self.player1.choice_gesture} player 2 wins the round!')
                 print(f'Current score Player 1: {self.player1.score} Player 2: {self.player2.score}')
-        
-   
-   
+                 
     def game_winner(self):
         if self.player1.score == 3:
             print("f The winner is {self.player_one.name}!")
         elif self.player2.score == 3:
             print("f The winner is {self.player_two.name}!")
+                
+                
+                
+               
+
+        
+   
+   
 
 
    
