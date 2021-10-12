@@ -7,7 +7,7 @@ class AI(Players):
        
         
 
-    def gesture(self):
+    def gestures(self):
         self.choice_gesture = random.choice(self.human_gestures)
         # if self.choice_gesture  in  self.ai_gesture:
         #     print(self.choice_gesture)
@@ -16,7 +16,7 @@ class AI(Players):
         #         print("/n not a choice.. Please select: rock, papers, scissors, lizard, sock/n")
                 
 
-        print (f'gesure choosen: {self.choice_gesture}')
+        print (f'gesture choosen: {self.choice_gesture}')
     def set_name(self):
         self.property_name = 'robot'
         print(self.property_name)
